@@ -1,0 +1,17 @@
+{{>header}}
+    <p>
+      Bienvenido al sistema de gestión de cursos del TdeA
+    </p>
+
+ Por favor seleccione su rol para ingresar:
+
+  <form action="/menuRol" method="post">
+ 	<select name=rol>
+ 		<option value="Coordinador">Coordinador</option>
+ 		<option value="Aspirante">Aspirante</option>
+ 	</select>
+
+ 	<button>Ingresar</button>
+ </form>
+
+{{>footer}}

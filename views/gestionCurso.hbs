@@ -1,0 +1,22 @@
+{{>header}}
+
+    <h2>Gestionar Curso {{nomCurso}}</h2>
+
+    <p>
+      Si desea cerrar el curso, seleccione la siguiente opción:
+    </p>
+
+    <form action="/cerrarCurso" method="post">
+    	<input type="hidden" name="nomCurso" value={{nomCurso}}>
+    	<input type="hidden" name="idCurso" value={{idCurso}}>
+	 	<button>Cerrar Curso</button>
+	</form>
+
+	<p>
+      A continuación se presenta la lista de estudiantes inscritos al curso {{nomCurso}}. Si desea anular la inscripción de alguno, seleccione la opción Eliminar:
+    </p>
+	
+  {{{listarInscritos idCurso}}}
+
+
+{{>footer}}

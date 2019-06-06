@@ -1,0 +1,36 @@
+{{>header}}
+
+    <h2>Crear Curso</h2>
+
+    <p>
+      Para crear un nuevo curso, por favor diligencie los campos (marcados con * son obligatorios) y haga clic en el botón 'Crear Curso'.
+    </p>
+
+	<form action="/crearCurso" method="post">
+	 	*Nombre: <input type="text" name="nomCurso"><br>
+	 	*Id: <input type="number" name="idCurso"><br>
+	 	*Descripción: <input type="text" name="descCurso"><br>
+	 	*Valor: <input type="number" name="valCurso"><br>
+	 	Modalidad:  	<select name=modCurso>
+					 		<option value=""></option>
+					 		<option value="virtual">Virtual</option>
+					 		<option value="presencial">Presencial</option>
+					 	</select><br>
+	 	Intensidad Horaria (Horas a la Semana): <input type="number" name="horasCurso"><br>
+
+	 	<button>Crear Curso</button>
+	</form>
+	
+    <h2>Gestionar Curso</h2>
+
+    <p>
+      A continuación se presenta el listado de los cursos. Seleccione uno para su modificación:
+    </p>
+
+
+    {{{listarCursos 'gestionCurso'}}}
+
+
+
+
+{{>footer}}

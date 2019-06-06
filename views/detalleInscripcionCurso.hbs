@@ -1,0 +1,33 @@
+{{>header}}
+{{#cursoInsc}}
+
+    <h2>Inscripción al curso  {{nombre}}</h2>
+
+    <h3>
+      Información general del curso:
+    </h3>
+
+    <ul>
+		<li type="circle">Nombre: {{nombre}}</li>
+		<li type="circle">Código de Identificación: {{id}}</li>
+		<li type="circle">Descripción: {{descripcion}}</li>
+		<li type="circle">Valor: {{valor}}</li>
+		<li type="circle">Modalidad: {{modalidad}}</li>
+		<li type="circle">Intesidad horaria semanal: {{intensidad}}</li>
+	</ul>
+
+    <p>
+      Para Iniciar la inscripción al curso, por favor diligencie los campos (marcados con * son obligatorios) y haga clic en el botón 'Inscribir'.
+    </p>
+
+	<form action="/inscribirAspirante" method="post">
+	 	*Documento de Identificación: <input type="text" name="id"><br>
+	 	*Nombres y Apellidos: <input type="text" name="nombre"><br>
+	 	*Correo electrónico: <input type="text" name="email"><br>
+	 	*Teléfono: <input type="number" name="telefono"><br>
+	 	<input type="hidden" name="idCurso" id="idCurso" value={{id}}><br>
+	 	<input type="hidden" name="nomCurso" id="nomCurso" value={{nombre}}><br>
+	 	<button>Inscribir</button>
+	</form>
+{{/cursoInsc}}
+{{>footer}}
